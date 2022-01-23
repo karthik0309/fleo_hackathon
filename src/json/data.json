@@ -1,0 +1,48 @@
+[
+    {
+        "name":"Tata steel",
+        "target_sales":400,
+        "current_sales":200,
+        "children":[
+            {
+                "name":"Factory A",
+                "target_sales":100,
+                "current_sales":20,
+                "children":[
+                    {
+                        "name":"Godown A",
+                        "target_sales":50,
+                        "current_sales":10
+                    },
+                    {
+                        "name":"Godown B",
+                        "target_sales":50,
+                        "current_sales":10
+                    }
+                ]   
+            },
+            {
+                "name":"Factory B",
+                "target_sales":200,
+                "current_sales":150
+            },
+            {
+                "name":"Factory C",
+                "target_sales":100,
+                "current_sales":30,
+                "children":[
+                    {
+                        "name":"Godown A",
+                        "target_sales":50,
+                        "current_sales":10
+                    },
+                    {
+                        "name":"Godown B",
+                        "target_sales":50,
+                        "current_sales":20
+                    }
+                ]   
+            }
+        ]
+    }
+]

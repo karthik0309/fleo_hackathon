@@ -1,0 +1,69 @@
+.heirarchy__container{ 
+  width: 90%;
+  margin: 7% auto;
+}
+
+.heirarchy__container ul {
+  padding-top: 20px;
+  position: relative;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.heirarchy__container li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.heirarchy__container::before,
+.heirarchy__container li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+
+.heirarchy__container  li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.heirarchy__container li:only-child::after,
+.heirarchy__container li:only-child::before {
+  display: none;
+}
+
+.heirarchy__container li:only-child {
+  padding-top: 0;
+}
+
+.heirarchy__container li:first-child::before,
+.heirarchy__container li:last-child::after {
+  border: 0 none;
+}
+
+.heirarchy__container li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.heirarchy__container li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
