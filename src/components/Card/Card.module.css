@@ -1,8 +1,9 @@
 .card__container{
-    height: 150px;
-    width: 250px;
+    height: 150px; 
+    width: 250px; 
     border-radius: 10px;
     color: rgb(49, 51, 54);
+    position: relative;
     background: rgb(249,250,252);   
 }
 

@@ -11,7 +11,7 @@ const Status = ({current,target}) => {
     useEffect(()=>{
       const perc = (current/target)*100;
       if(perc<33){
-          setColor({main:progressColors[0].main, bg:progressColors[0].bg,status:progressColors[33].status})
+          setColor({main:progressColors[0].main, bg:progressColors[0].bg,status:progressColors[0].status})
       }else if(perc>33 && perc<66){
           setColor({main:progressColors[33].main, bg:progressColors[33].bg,status:progressColors[33].status})
       }else{

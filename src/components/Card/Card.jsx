@@ -6,18 +6,14 @@ import classes from "./Card.module.css"
 
 
 const Card = ({data}) => {
-  const [show,setShow]=useState(0)
-
-  const handleCardClick=()=>{
-
-  }
+  const [show,setShow]=useState(false)
 
   return(
       <ul>
         {data.map((items,index)=>(
             <React.Fragment key={items.name}>
                 <li>
-                    <div className={classes.card__container}>
+                    <div className={classes.card__container} onClick={()=>setShow(!show)}>
                         <div className={classes.card__header}>
                             <p className={classes.card__title}>
                                 {items.name}
@@ -42,7 +38,7 @@ const Card = ({data}) => {
                             </div>
                         </div>
                     </div>
-                    {items.children?.length && <Card data={items.children} />}
+                    {items.children?.length && show && <Card data={items.children} />}
                 </li>
             </React.Fragment>
         ))}
